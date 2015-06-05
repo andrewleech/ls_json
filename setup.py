@@ -19,8 +19,12 @@
 #
 # You should have received a copy of the PSF License
 # along with ls_json.  If not, see <https://docs.python.org/2/license.html>
-
+import os
 from setuptools import setup
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 setup(name='ls_json',
     version = "1.0",
     py_modules = ['ls_json'],
@@ -33,6 +37,7 @@ setup(name='ls_json',
     author = "Andrew Leech",
     author_email = "andrew@alelec.net",
     description = "ls_json traverses either the provided path or current dir and returns the file tree (with file sizes) in json format",
+    long_description = read('README.md'),
     license = "PSF",
     keywords = "directory tree json",
     url = "https://github.com/andrewleech/ls_json"
