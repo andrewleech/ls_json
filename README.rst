@@ -5,9 +5,13 @@ ls_json traverses either the provided path or current dir and returns the file t
 
 by default it installs as a console application into the users path.
 
+find releases on pypi: https://pypi.python.org/pypi/ls_json
+
 **Usage:**::
 
     ~/ls_json ## python setup.py install
+    or
+    ~/ls_json ## pip install ls_json
 
     ~/ls_json ## ls_json
     {
