@@ -1,3 +1,0 @@
-[console_scripts]
-ls_json = ls_json:main
-
