@@ -1,3 +1,4 @@
 .pydio_id
 dist/
 build/
+ls_json.egg-info/

@@ -22,8 +22,9 @@
 import os
 from setuptools import setup
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+def read(fname, skiplines=0):
+    f = open(os.path.join(os.path.dirname(__file__), fname)).readlines()
+    return "".join(f[skiplines:])
 
 setup(name='ls_json',
     version = "1.0",
@@ -37,7 +38,7 @@ setup(name='ls_json',
     author = "Andrew Leech",
     author_email = "andrew@alelec.net",
     description = "ls_json traverses either the provided path or current dir and returns the file tree (with file sizes) in json format",
-    long_description = read('README.md'),
+    long_description = read('README.rst', 4),
     license = "PSF",
     keywords = "directory tree json",
     url = "https://github.com/andrewleech/ls_json"
